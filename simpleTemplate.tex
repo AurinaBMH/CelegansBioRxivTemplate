@@ -440,7 +440,7 @@ The coefficient assumes a maximum value $r_\phi = 1$ when $x$ and $y$ are identi
 
 One concern about applying this measure to sparsely annotated data is that it may be biased by differences in the number of expressed genes in a neuron, which ranged from 3 (0.3\% of 948 genes analyzed here) to 138 (14.6\%).
 To explore this further, we compared $r_\phi$ with several other commonly used metrics of association between binary vectors including Yule's $Q$ and Jaccard.
-While these other binary correlation metrics exhibited strong bias with the proportion of gene expression annotations made to a given neuron, $r_\phi$ was not biased (see \nameref{S1_Fig}).
+While these other binary correlation metrics exhibited strong bias with the proportion of gene expression annotations made to a given neuron, $r_\phi$ was not biased (see Fig.~\ref{S1_Fig}).
 Note that we use $r_\phi$ to denote this coefficient given that it is commonly referred to as the phi coefficient in the literature; this notation should not be confused with $\phi(k)$, which is used to denote the rich club coefficient.
 
 % A total of 92 anatomically distinct neuron classes are bilateral, that is, they contain both left and right counterparts (e.g., AVAL/AVAR).
@@ -477,9 +477,9 @@ and (iii) low genome coverage (less than 5\% of the protein coding genes in \emp
 % fot the enrichment we choose gene set size (5-100), so no analysis could be done with only one gene.
 % [GenesinGO, GOs] = searchGOcategories(C,G, 'mouse');
 Given that $r_\phi$ [Eq.~\ref{eq:rphi}] treats mutual gene expression (i.e., cases in which a gene is jointly expressed in both neurons) ($n_{11}$) the same as mutual absence of gene expression ($n_{00}$), we started by developing a new analytic measure of the probability of mutual gene expression, given its clearer biological interpretation (see Supporting Information).
-This measure was not biased by differences in the relative number of expressed genes (\nameref{S1_Fig}D) and yields qualitatively similar outputs to $r_\phi$ on our data.
+This measure was not biased by differences in the relative number of expressed genes (Fig.~\ref{S1_Fig}D) and yields qualitatively similar outputs to $r_\phi$ on our data.
 Thus, while we use $r_\phi$ throughout this work for its ease of interpretation (as an analogue of the conventional correlation coefficient), our new probability-based CGE measure allowed us to motivate a method for quantifying the contribution of individual genes (and functional groups of genes) to patterns of CGE that addresses some of the above-mentioned challenges.
-Note that our basic findings replicated regardless of whether we use $r_\phi$ or this new measure to quantify CGE (e.g., cf. \nameref{S2_Fig}).
+Note that our basic findings replicated regardless of whether we use $r_\phi$ or this new measure to quantify CGE (e.g., cf. Fig.~\ref{S2_Fig}).
 % and was useful for validating and interpreting our results.
 % The similarity in results based on both $r_\phi$ and CGE matching index motivated the development of a new method to quantify the contribution of individual genes, and functional groups of genes, to patterns of coupled expression that allows to overcome the above mentioned challenges.
 
@@ -663,7 +663,7 @@ The decreasing trend in CGE with distance within the head and tail is primarily 
 It may therefore represent a relationship specific to particular functionally related neurons, rather than a general, bulk spatial relationship seen in macroscopic mammalian brains \cite{Fulcher:2016ck}.
 % Given the weak spatial relationships of $r_\phi$ in \emph{C. elegans} that are only seen within the head and tail and are driven mostly by pairs of close neurons with similar gene expression profiles, there is no clear bulk spatial trend that can be corrected for (as done previously for mouse brain expression data \cite{Fulcher:2016ck}).
 % Residuals after subtracting an exponential form (following Fulcher and Fornito using mouse brain expression data \cite{Fulcher:2016ck}), are not symmetric, since the trend is often driven by pairs of close neurons with high CGE.
-Accordingly, attempting to correct for a bulk, non-specific trend by taking residuals from an exponential fitted to the relationship produced artifactual reductions in the CGE of many neuron pairs (shown in \nameref{S3_Fig}).
+Accordingly, attempting to correct for a bulk, non-specific trend by taking residuals from an exponential fitted to the relationship produced artifactual reductions in the CGE of many neuron pairs (shown in Fig.~\ref{S3_Fig}).
 % NOTE AA: I think we should include the plot (probably in supp) where exp for head-head is fitted (A) and a plot for residuals (B).
 % Given that the effect was relatively small, and no standard correction could be applied, we use original uncorrected CGE data for all the further analyses.
 % Due to the large artifacts introduced, we chose not to correct for the small spatial dependence of CGE in head-head and tail-tail connections for the main analyses presented here,
@@ -762,9 +762,9 @@ The figure plots the variation of $\Phi_\mathrm{norm}$ across degree thresholds,
 % [[check whether randmio\_dir only preserves degree: AA - degree distributions in binary, out-strength (but not in-strength) in weighted]].
 The plot reveals rich-club organization ($\Phi_\mathrm{norm} > 1$) at the upper tail of the degree distribution, particularly across the range $44 < k < 63$, shaded gray in Fig.~\ref{fig:Fig5}B.
 % ), referred to here as the `topological rich-club regime'.
-Similar results were obtained using weighted representations of the connectome (i.e., using information about the number of synapses in the connectivity network) for two different definitions of the weighted rich-club coefficient \cite{Opsahl2008}, shown in \nameref{S4_Fig}.
+Similar results were obtained using weighted representations of the connectome (i.e., using information about the number of synapses in the connectivity network) for two different definitions of the weighted rich-club coefficient \cite{Opsahl2008}, shown in Fig.~\ref{S4_Fig}.
 Throughout this work, we define a set of hubs as the sixteen neurons with $k > 44$, which corresponds to the lowest degree threshold at which the network displays a contiguous region of significant rich-club organization at high $k$.
-Our list of hubs includes all of the 11 hub neurons of Towlson et al.~\cite{Towlson2013} at $3 \sigma$ (see \nameref{tab:HubList}) with five additional hubs identified in our analysis of the directed connectome.
+Our list of hubs includes all of the 11 hub neurons of Towlson et al.~\cite{Towlson2013} at $3 \sigma$ (see Fig.~\ref{tab:HubList}) with five additional hubs identified in our analysis of the directed connectome.
 % This indicates that when nodes are defined as hubs (degree $>\textit{k}$) in this range, they are more densely interconnected than expected by chance.
  % of the analyses presented below examine how different topological and genomic properties vary as a function of the hub threshold, $k$, but for analyses requiring a fixed hub definition, we define hubs as the 13 neurons with
 
@@ -775,7 +775,7 @@ Our list of hubs includes all of the 11 hub neurons of Towlson et al.~\cite{Towl
 The rich-club connectivity of the \emph{C. elegans} connectome is accompanied by an increase in mean hub-hub connection distance \cite{Towlson2013}, with a significant increase through the topological rich-club regime (right-tailed Welch's $t$-test, $p < 0.05$), shown in Fig.~\ref{fig:Fig5}B.
 % and consistent with prior analysis by Towlson et al. \cite{Towlson:2013gf}.
  % we plot the mean distance between all pairs of connected hubs at each degree threshold, $k$.
-This can be attributed to a relative increase in long-distance hub-hub connections between the head and tail, shown in Fig.~\ref{fig:Fig2} (cf. \nameref{S5_Fig}).
+This can be attributed to a relative increase in long-distance hub-hub connections between the head and tail, shown in Fig.~\ref{fig:Fig2} (cf. Fig.~\ref{S5_Fig}).
 % , we find an increase in mean hub-hub connection distance with $k$, through to the extent of the topological rich-club regime.
 The high connection density and long mean anatomical distance between pairs of hub neurons counters the general trend in the \emph{C. elegans} connectome, where the probability of connectivity between two neurons decays with their separation distance (Fig.~\ref{fig:Fig3}).
 These results are consistent with previous findings across diverse neural systems and suggest that the rich club may provide a central yet costly backbone for neuronal communication in \emph{C. elegans} \cite{vandenHeuvel:2012kh, Towlson2013}.
@@ -825,7 +825,7 @@ We found no difference in CGE between pairs of neurons connected reciprocally by
 % ------------------------------------------------------------------------------
  \begin{figure}[h!]
  \centering
-    \includegraphics[width=0.75\textwidth]{MeanCoexpression5.pdf}
+    \includegraphics[width=0.78\textwidth]{MeanCoexpression5.pdf}
 \caption{{\bf Correlated gene expression varies as a function of connectedness and connection type.}
 (A) \textit{Left}: distribution of CGE for (i) pairs of neurons connected by gap junctions, (ii) pairs of neurons connected by reciprocal chemical synapses, (iii) pairs of neurons connected by unidirectional chemical synapses, (iv) pairs of neurons that are unconnected, shown as a violin plot, with the median of each distribution represented by a horizontal line.
 CGE is increased in connected (electrical or chemical; reciprocally or unidirectionally) pairs of neurons relative to unconnected pairs ($p = 1.8 \times 10^{-78}$, Wilcoxon rank sum test).
@@ -1156,7 +1156,7 @@ and locomotion (\emph{unc-3}) \cite{Prasad2008}) were also implicated in driving
 Both adhesion molecules and transcription factors are candidates for facilitating signal transduction and communication.
 
 In order to summarize the above mentioned results and determine if any particular functional groups of genes are dominating in driving this effect, we performed an enrichment analysis.
-Top scoring biological process GO categories from ORA analysis (of 85 genes relative to the 414 genes with sufficient data for this analysis) are listed in \nameref{tab:enrichmentCON}.
+Top scoring biological process GO categories from ORA analysis (of 85 genes relative to the 414 genes with sufficient data for this analysis) are listed in Table~\ref{tab:enrichmentCON}.
 Although no GO categories are significant at a false discovery rate of 0.05, the top categories are consistent with a connectivity profile, including `glutamate receptor signaling', `cell surface receptor signaling', and `ion transport', with other categories involved in regulation of growth rate and several related to catabolic processes.
 Thus, despite incomplete gene expression data that do not provide sufficient coverage to detect statistically significant effects, these results indicate that our data-driven gene scoring method is able to yield sensible, biologically relevant insights into the genetic basis of neuronal connectivity in \textit{C. elegans} connectome.
 
@@ -1193,7 +1193,7 @@ While previous work implicated genes regulating oxidative metabolism for connect
 For example, only one of the 948 genes annotated to the GO categories related to hub connectivity in mouse is present in our gene expression dataset (\emph{unc-32} is annotated to the GO category: `ATP hydrolysis coupled proton transport').
 % GO:0015991:
 % GO categories were filtered using <<searchGOcategories.m>> function.
-Thus, although a direct test of the metabolic hypothesis for neural hubs is not possible from current data, we investigated whether other biological process GO categories were overrepresented in pairs of connected hubs using ORA (of 30 genes relative to the 168 genes with sufficient data for this analysis), with results listed in \nameref{tab:enrichmentRICH}.
+Thus, although a direct test of the metabolic hypothesis for neural hubs is not possible from current data, we investigated whether other biological process GO categories were overrepresented in pairs of connected hubs using ORA (of 30 genes relative to the 168 genes with sufficient data for this analysis), with results listed in Table \ref{tab:enrichmentRICH}.
 % , providing some support for the idea that hubs are energetically costly elements of the connectome.
 %Due to gene expression data specificity in all the following analyses we present top 15 GO categories enriched in a particular link type compared to other links.
 Even though no categories are statistically significant at a false discovery rate of 0.05, the list of top categories includes both `glutamate receptor signaling pathway' as well as more general `cell surface receptor signaling pathway' in addition to several ion transport related gene groups ('ion transport', `ion transmembrane transport', `transmembrane transport').
@@ -1545,7 +1545,7 @@ Our index, $p_\mathrm{match}$, is approximately equal to the probability of obta
 \end{equation}
 for $m$ positive matches.
 
-We verified that this index yields qualitatively similar results to the mean square contingency coefficient, $r_\phi$, used throughout this work (\nameref{S2_Fig}), validating our related positive match method for scoring individual genes [as an approximately single-gene contribution to the probability score computed in Eq.~\eqref{eqn:pmatch}].
+We verified that this index yields qualitatively similar results to the mean square contingency coefficient, $r_\phi$, used throughout this work (Fig.~\ref{S2_Fig}), validating our related positive match method for scoring individual genes [as an approximately single-gene contribution to the probability score computed in Eq.~\eqref{eqn:pmatch}].
 Given the qualitative similarity of this measure to $r_\phi$, we chose to focus on $r_\phi$ throughout this work due to its ease of interpretability as a correlation coefficient ranging from -1 to 1.
 
 \subsection*{Sensitivity of correlated gene expression measures}
@@ -1560,13 +1560,13 @@ and the $\chi^2$ index, $N (n_{00}n_{11} - n_{01}n_{10})/(n_{1\bullet}n_{0\bulle
 % and Simple matching coefficients [[TODO: define and give reference]],
 
 To evaluate bias in each CGE measure to the proportion of annotations in each expression vector, we generated random binary vectors of length 948 containing different proportions of 1s seen in our data, ranging from the minimum, 1, to the maximum, 150.
-For all pairwise combinations of proportions, we computed the CGE measure, taking an average across 1\,000 permutations, and then recorded the resulting mean correlation value, as plotted in \nameref{S1_Fig}.
+For all pairwise combinations of proportions, we computed the CGE measure, taking an average across 1\,000 permutations, and then recorded the resulting mean correlation value, as plotted in Fig.~\ref{S1_Fig}.
 Because all vectors are independent random binary strings, any systematic dependence of mean CGE with annotation proportion indicates bias.
-The mean square contingency coefficient, $r_\phi$ (\nameref{S1_Fig}A) and our own novel CGE matching index, $p_\mathrm{match}$ (\nameref{S1_Fig}D) show no systematic dependence on the proportion of ones in each vector (varying randomly within $\approx 10^{-3}$ and $\approx 0.5$ respectively).
-However, Yule's $Q$ shows a negative bias for small annotation proportions (\nameref{S1_Fig}B) and the Jaccard index shows a strong positive bias across the full range (\nameref{S1_Fig}C).
+The mean square contingency coefficient, $r_\phi$ (Fig.~\ref{S1_Fig}A) and our own novel CGE matching index, $p_\mathrm{match}$ (Fig.~\ref{S1_Fig}D) show no systematic dependence on the proportion of ones in each vector (varying randomly within $\approx 10^{-3}$ and $\approx 0.5$ respectively).
+However, Yule's $Q$ shows a negative bias for small annotation proportions (Fig.~\ref{S1_Fig}B) and the Jaccard index shows a strong positive bias across the full range (Fig.~\ref{S1_Fig}C).
 Based on these numerical experiments, we selected mean square contingency coefficient, $r_\phi$, here, to ensure that changes in CGE were due to matching expression patterns and not simply driven by differences in the number of gene annotations between neurons.
 
-% As shown in \nameref{S1_Fig}, the only metric that did not show a systematic bias on random binary vectors as a function of the proportion of ones was $r_\phi$.
+% As shown in Fig.~\ref{S1_Fig}, the only metric that did not show a systematic bias on random binary vectors as a function of the proportion of ones was $r_\phi$.
 % , which is used here to ensure that increases in CGE are driven by relative similarity in expression patterns, and not simply by differences in the number of gene annotations for a given pair of neurons.
 % In contrast, other measures such as Jaccard and Yule's index are highly dependent on this ratio (see S1 Fig.).% done with compareProportions script
 % and Simple matching coefficients
@@ -1605,11 +1605,11 @@ Based on these numerical experiments, we selected mean square contingency coeffi
 %Categories are sorted by $p$-value (ascending).
 
 \begin{table}[!h]
-\begin{adjustwidth}{-0.7in}{}
+% \begin{adjustwidth}{-0.7in}{}
 \centering
 \caption{\textbf{Hub neurons of the \textit{C. elegans} connectome.}
 Hubs are defined as neurons with degree $k > 44$.
-For each hub, we list (i) the neuron name, (ii) its degree, $k$, (iii) location (`head', `body', or `tail'), and function based on information presented in the wormatlas website \url{http://www.wormatlas.org/}.
+For each hub, we list (i) the neuron name, (ii) its degree, $k$, (iii) location (`head', `body', or `tail'), and function based on information presented in the Wormatlas website, \url{www.wormatlas.org/}.
 Neurons are sorted (descending) by degree.}
 \label{tab:HubList}
 \begin{tabular}{lll}
@@ -1632,13 +1632,13 @@ RIBR   & 52         & Head interneuron                                          
 AIBR   & 49         & Head interneuron                                             \\
 RIGL   & 49         & Head interneuron                                             \\\hline
 \end{tabular}
-\end{adjustwidth}
+% \end{adjustwidth}
 \end{table}
 
 
 
-\begin{table}[]
-\begin{adjustwidth}{-0.7in}{}
+\begin{table}[h]
+% \begin{adjustwidth}{-0.7in}{}
 \centering
 \caption{Top 15 biological process GO categories enriched in genes with the highest mean increase in CGE for connected neurons compared to unconnected neurons.
 Categories are sorted by $p$-value (ascending).}
@@ -1664,11 +1664,11 @@ GO:0045927          & positive regulation of growth                             
 GO:0050830          & defense response to Gram-positive bakterium%& \begin{tabular}[c]{@{}l@{}}defense response to Gram-positive \\ bacterium\end{tabular}
 & 5                                                      & 0.0695                                                & 1    \\\hline
 \end{tabular}
-\end{adjustwidth}
+% \end{adjustwidth}
 \end{table}
 
 
-\begin{table}[]
+\begin{table}[h]
 \begin{adjustwidth}{-0.7in}{}
 \centering
 \caption{
